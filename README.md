@@ -5,7 +5,7 @@ Home: https://www.github.com/vincentarelbundock/WDI
 
 Package license: GPL-3
 
-Feedstock license: BSD 3-Clause
+Feedstock license: BSD-3-Clause
 
 Summary: Search, extract and format data from the World Bank's World Development Indicators.
 
