@@ -1,4 +1,4 @@
-{% set version = "2.7.3" %}
+{% set version = "2.7.4" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,7 +10,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/WDI_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/WDI/WDI_{{ version }}.tar.gz
-  sha256: 7b1000677f7a3ad0115dc3206e98b2ee318894291a60e0bbebb2199a0a1464a3
+  sha256: f79a293c1ed5698c7c22d361f3b4de3da6775d7a3fd7724544a8a108e56d6d94
 
 build:
   merge_build_host: true  # [win]
