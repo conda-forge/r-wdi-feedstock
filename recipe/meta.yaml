@@ -37,15 +37,16 @@ test:
 
 about:
   home: https://www.github.com/vincentarelbundock/WDI
-  license: GPL-3
+  license: GPL-3.0-only
   summary: Search, extract and format data from the World Bank's World Development Indicators.
   license_family: GPL3
-  license_file: {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3
+  license_file:
+    - {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3
 
 extra:
   recipe-maintainers:
-    - philip-khor
     - conda-forge/r
+    - philip-khor
 
 # Package: WDI
 # Title: World Development Indicators (World Bank)
