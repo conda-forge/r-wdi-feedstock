@@ -1,4 +1,4 @@
-{% set version = "2.7.7" %}
+{% set version = "2.7.8" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,7 +10,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/WDI_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/WDI/WDI_{{ version }}.tar.gz
-  sha256: 851ef631e5f69757eab4ead6cb158b7b370bde317b2e585654ca2b360e4e6e86
+  sha256: acf56a705d38cadda108a1b9f3a8ce22090bac57c44f1b6ffd23c43d3c39ede0
 
 build:
   merge_build_host: true  # [win]
@@ -23,12 +23,13 @@ build:
 requirements:
   build:
     - {{ posix }}zip               # [win]
+    - cross-r-base {{ r_base }}    # [build_platform != target_platform]
   host:
     - r-base
-    - r-rjsonio
+    - r-jsonlite
   run:
     - r-base
-    - r-rjsonio
+    - r-jsonlite
 
 test:
   commands:
