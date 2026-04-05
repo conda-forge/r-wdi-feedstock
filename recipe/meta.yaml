@@ -1,4 +1,4 @@
-{% set version = "2.7.9" %}
+{% set version = "2.7.10" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,10 +9,10 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/WDI_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/WDI/WDI_{{ version }}.tar.gz
-  sha256: 2a0f21938d3800d46aeaf4a1d7c3107225384bb0c572bf7e9bb03913760454ce
+  sha256: c0b4f4a5843afdca2a288862d8887f0ae0e8404ae61f9bd0fedbd5867a67f3a8
 
 build:
-  number: 1
+  number: 0
   noarch: generic
   rpaths:
     - lib/R/lib/
